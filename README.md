@@ -11,7 +11,6 @@ Backend API for a fictional state-level attendance system with strict role-based
 ## 2) Local Setup (from scratch)
 
 ```bash
-cd submission
 python -m venv .venv
 ```
 
@@ -215,3 +214,7 @@ curl -X GET "$BASE_URL/monitoring/attendance" -H "Authorization: Bearer $MONITOR
 - Key rotation with `kid` headers and active key set in JWKS/secret manager
 - Revocation list for compromised tokens
 - Monitoring API key rotation schedule with overlap window and audit logs
+
+## 11) One Thing I'd Do Differently With More Time
+
+- I would add Alembic migrations and non-destructive seed modes (for example `--reset` and `--upsert`) so production data is never dropped accidentally when reseeding.
