@@ -1,0 +1,6 @@
+Full Name: B Chaitanya Reddy
+Email: bchaitanyareddy895@gmail.com
+Phone: 9063975451
+GitHub: https://github.com/BChaitanyaReddy895
+
+Most challenging part (1 sentence): The most challenging part was designing the Monitoring Officer's dual-token flow in a way that stayed secure and simple, while still keeping role checks consistent and easy to reason about across every protected endpoint.
