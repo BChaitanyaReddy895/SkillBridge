@@ -4,8 +4,9 @@ Backend API for a fictional state-level attendance system with strict role-based
 
 ## 1) Live API Base URL
 
-- Live base URL: `TODO_AFTER_DEPLOYMENT`
-- Deployment note: this project is deployable on Render/Railway/Fly using `uvicorn src.main:app --host 0.0.0.0 --port $PORT`.
+- Live base URL: `https://skillbridge-764w.onrender.com`
+- Deployment note: deployed on Render with Neon PostgreSQL using `uvicorn src.main:app --host 0.0.0.0 --port $PORT`.
+- Free-tier note: Render free instance may spin down after inactivity and the first request can be delayed.
 
 ## 2) Local Setup (from scratch)
 
@@ -99,7 +100,7 @@ Monitoring scoped token (`/auth/monitoring-token`):
 Set:
 
 ```bash
-BASE_URL=http://127.0.0.1:8000
+BASE_URL=https://skillbridge-764w.onrender.com
 ```
 
 Signup:
@@ -198,7 +199,7 @@ curl -X GET "$BASE_URL/monitoring/attendance" -H "Authorization: Bearer $MONITOR
   - Seed script with required data volume
   - Required five pytest tests
 - Partially done:
-  - Live deployment URL not filled yet (depends on platform account setup)
+  - No known partial items at submission time
 - Skipped:
   - Alembic migrations (using `create_all` for take-home speed)
   - Token blacklist/revocation store (documented below)
