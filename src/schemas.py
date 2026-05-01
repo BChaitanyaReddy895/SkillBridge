@@ -1,7 +1,7 @@
 from datetime import date, datetime, time
 from typing import Literal
 
-from pydantic import BaseModel, EmailStr, Field
+from pydantic import BaseModel, Field
 
 from src.models import AttendanceStatus, Role
 
@@ -13,14 +13,14 @@ class TokenResponse(BaseModel):
 
 class SignupRequest(BaseModel):
     name: str = Field(min_length=1, max_length=200)
-    email: EmailStr
+    email: str = Field(min_length=5, max_length=320, pattern=r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
     password: str = Field(min_length=6, max_length=128)
     role: Role
     institution_id: int | None = None
 
 
 class LoginRequest(BaseModel):
-    email: EmailStr
+    email: str = Field(min_length=5, max_length=320, pattern=r"^[^@\s]+@[^@\s]+\.[^@\s]+$")
     password: str
 
 
